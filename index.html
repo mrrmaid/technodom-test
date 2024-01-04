@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="styles.sass">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="products">
+        </div>
+        <button id="load-more">More items</button>
+    </div>
+<script>
+    const cardContainer = document.getElementById("products");
+    addCards(currentPage);
+    
+    const loadMoreButton = document.getElementById("load-more");
+    const deleteButtons = document.getElementsByClassName("deleteMe");
+    
+    loadMoreButton.addEventListener("click", () => {
+        addCards(currentPage + 1);
+    });
+
+    Array.from(deleteButtons).forEach(function(element) {
+      element.addEventListener('click', () => {
+            
+        });
+    });
+    
+</script>
+</body>
+</html>
